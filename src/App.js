@@ -1,4 +1,3 @@
-import "./App.css";
 import { useState } from "react";
 import Promo from "./components/promo";
 import Render from "./components/render";
@@ -24,6 +23,7 @@ function App() {
   return (
     <div className="App">
       <div className="App-header">
+        <div className = 'headerPromo'>
         <PromoProduct
           addToCart={addToCart}
           randomPromo={randomPromo}
@@ -35,6 +35,7 @@ function App() {
           setRandomProduct={setRandomProduct}
           setRandomPromo={setRandomPromo}
         />
+        </div>
         <Render products={products} addToCart={addToCart} />
         <Cart cart={cart} />
       </div>

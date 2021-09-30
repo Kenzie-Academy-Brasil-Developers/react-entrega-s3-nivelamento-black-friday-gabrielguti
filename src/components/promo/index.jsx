@@ -22,7 +22,7 @@ const Promo = ({
   console.log(randomProduct);
 
   return (
-    <div>
+    <div className = 'PromoButton'>
       <button onClick={handleRandom}>Gerar promoção</button>
     </div>
   );

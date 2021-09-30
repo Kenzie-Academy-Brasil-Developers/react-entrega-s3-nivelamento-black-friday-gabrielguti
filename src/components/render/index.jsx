@@ -1,15 +1,15 @@
 const Render = ({ products, addToCart }) => {
   return (
-    <div>
-      <ul>
+    <div className = 'products'>
+      
         {products.map((item) => (
-          <li key={item.id}>
+          <div className = 'product' key={item.id}>
             <span>{item.name}</span>
             <span>{`R$ ${item.price}`}</span>
             <button onClick={() => addToCart(item)}>Add</button>
-          </li>
+          </div>
         ))}
-      </ul>
+    
     </div>
   );
 };

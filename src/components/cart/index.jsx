@@ -1,17 +1,19 @@
 const Cart = ({ cart }) => {
   const cartValue = cart.reduce((value1, value2) => {
-    return value1 + value2.price;
+    return Math.round(value1 + value2.price);
   }, 0);
 
   return (
-    <div>
+    <div className = 'cartItems'>
       <h2>Carrinho:</h2>
-      <span>{`valor total: R$ ${cartValue}`}</span>
-      <ul>
+      <p>Valor total: <span>{`R$ ${cartValue}`}</span></p>
+      <div className="cart">
         {cart.map((item) => (
-          <li key = {item.id}>{`${item.name} R$ ${item.price}`}</li>
+          <div className = 'cartItem' key={item.id}>
+            <p>{`${item.name} R$ ${item.price}`}</p>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
